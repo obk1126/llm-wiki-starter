@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LLM Wiki Book",
+	"behavior": "create",
+	"noteContentFormat": "## 내용/발췌\n{{content}}",
+	"properties": [
+		{ "name": "type", "value": "book", "type": "text" },
+		{ "name": "title", "value": "{{title}}", "type": "text" },
+		{ "name": "source", "value": "{{url}}", "type": "text" },
+		{ "name": "author", "value": "{{author|split:\", \"|wikilink|join}}", "type": "multitext" },
+		{ "name": "published", "value": "{{published}}", "type": "date" },
+		{ "name": "created", "value": "{{date:YYYY-MM-DD}}", "type": "date" },
+		{ "name": "status", "value": "inbox", "type": "text" },
+		{ "name": "purpose", "value": "", "type": "text" },
+		{ "name": "tags", "value": "raw/book", "type": "multitext" }
+	],
+	"triggers": [
+		"https://www.goodreads.com/book/",
+		"https://books.google.com/"
+	],
+	"noteNameFormat": "{{date:YYYY-MM-DD}} - BK - {{title}}",
+	"path": "Raw"
+}

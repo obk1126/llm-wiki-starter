@@ -1,0 +1,24 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LLM Wiki YouTube",
+	"behavior": "create",
+	"noteContentFormat": "## 설명\n{{description}}\n\n## 트랜스크립트\n{{content}}",
+	"properties": [
+		{ "name": "type", "value": "youtube", "type": "text" },
+		{ "name": "title", "value": "{{title}}", "type": "text" },
+		{ "name": "source", "value": "{{url}}", "type": "text" },
+		{ "name": "author", "value": "{{author|split:\", \"|wikilink|join}}", "type": "multitext" },
+		{ "name": "published", "value": "{{published}}", "type": "date" },
+		{ "name": "created", "value": "{{date:YYYY-MM-DD}}", "type": "date" },
+		{ "name": "status", "value": "inbox", "type": "text" },
+		{ "name": "purpose", "value": "", "type": "text" },
+		{ "name": "tags", "value": "raw/youtube", "type": "multitext" }
+	],
+	"triggers": [
+		"https://www.youtube.com/watch",
+		"https://youtu.be/",
+		"https://m.youtube.com/watch"
+	],
+	"noteNameFormat": "{{date:YYYY-MM-DD}} - YT - {{title}}",
+	"path": "Raw"
+}

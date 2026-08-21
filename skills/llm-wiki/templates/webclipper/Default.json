@@ -1,0 +1,21 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LLM Wiki Default",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{ "name": "type", "value": "article", "type": "text" },
+		{ "name": "title", "value": "{{title}}", "type": "text" },
+		{ "name": "source", "value": "{{url}}", "type": "text" },
+		{ "name": "author", "value": "{{author|split:\", \"|wikilink|join}}", "type": "multitext" },
+		{ "name": "published", "value": "{{published}}", "type": "date" },
+		{ "name": "created", "value": "{{date:YYYY-MM-DD}}", "type": "date" },
+		{ "name": "status", "value": "inbox", "type": "text" },
+		{ "name": "purpose", "value": "", "type": "text" },
+		{ "name": "description", "value": "{{description}}", "type": "text" },
+		{ "name": "tags", "value": "raw/article", "type": "multitext" }
+	],
+	"triggers": [],
+	"noteNameFormat": "{{date:YYYY-MM-DD}} - {{title}}",
+	"path": "Raw"
+}
